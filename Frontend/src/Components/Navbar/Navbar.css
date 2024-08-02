@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    margin-left: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    padding: 1.5vw;
+    box-shadow:0px 1px 3px -2px black;
+    background-color: #f3f3f3;
+    align-items: center;
+}
+
+.nav-logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-logo p{
+    color: black;
+    font-size: 28px;
+    font-weight: 600;
+    margin-right: 20px;
+}
+
+.nav-menu{
+    display: flex;
+    align-items: center;
+    gap: 3.5vw;
+    list-style: none;
+    color: #626262;
+    font-size: 1vw;
+    font-weight: 500;
+}
+
+.nav-menu li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    cursor: pointer;
+}
+
+.nav-menu hr{
+    border: none;
+    width: 80%;
+    height: 3px;
+    border-radius: 10px;
+    background: #FF4141;
+}
+
+.nav-login-cart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 45px;
+}
+
+.nav-login-cart button{
+    width: 7.2vw;
+    height: 7vh;
+    outline: none;
+    border: 1px solid #7a7a7a;
+    border-radius: 2vw;
+    color: #515151;
+    font-size: 1.1vw;
+    font-weight: 500;
+    background: white;
+    cursor: pointer;
+}
+.nav-login-cart button:active{
+    background:#f3f3f3;
+}
+
+.nav-cart-count{
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -35px;
+    margin-left: -55px;
+    border-radius: 11px;
+    font-size: 14px;
+    background: red;
+    color: white;
+}
+
+.Navbar{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+   }
+   
+   .message{
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       font-size: 18px;
+       font-weight: 500;
+       color: rgb(255, 255, 255);
+       margin-top: 4px;
+       margin-bottom: -37px;
+   }
+   .message p{
+       background: #e51111;
+       padding: 7px 30px;
+       border:none;
+       outline: none;
+       border-radius: 18px;
+
+   }
+   .nav-dropdown{
+    display: none;
+   }
+
+   @media(max-width:1280px){
+    .navbar{
+        padding: 12px 50px;
+    }
+    .nav-logo{
+        width: 40px;
+    }
+    .nav-logo p{
+        font-size: 25px;
+    }
+    .nav-menu{
+        gap: 30px;
+        font-size: 16px;
+    }
+    .nav-login-cart{
+        gap: 30px;
+    }
+    .nav-login-cart button{
+        width: 120px;
+        height: 50px;
+        font-size: 16px;
+    }
+    .nav-cart-count{
+        margin-left: -40px;
+        font-size: 12px;
+    }
+    .nav-dropdown{
+        display: none;
+       }
+   }
+  @media(max-width:1024px) and (min-width:800px){
+    .nav-logo p{
+        margin-right: 1rem;
+        font-size: 20px;
+    }
+    .nav-menu{
+        margin-left: 90px;
+    }
+  }
+
+   @media(max-width:800px){
+        .Navbar{
+            padding: 10px 10px;
+        }
+        .nav-dropdown{
+            display: block;
+            rotate: -90deg;
+            transition: 0.5s;
+            width: 30px;
+            height: 30px;
+        }
+        .nav-menu{
+            display: none;
+            height: 70px;
+            width: 100%;
+            position: absolute;
+            background-color: white;
+            justify-content: center;
+            top: 70px;
+            animation-duration: 500ms;
+        }
+        .nav-menu-visible{
+            display: flex;
+            
+        }
+        .nav-dropdown.open{
+            transform: rotate(90deg);
+        }
+        .nav-dropdown {
+            align-items: center;
+            margin-left: 100px;
+        }
+        .nav-login-cart{
+            transform: scale(0.7);
+        }
+        .nav-logo{
+            transform: scale(0.8);
+        }
+   }
+
+   @media(max-width:500px){
+        .navbar{
+            padding: 12px 0px;
+            gap: 0;
+        }
+        .nav-logo{
+            transform: scale(0.8);
+        }
+        .nav-dropdown{
+            margin-left: 70px;
+        }
+        .nav-menu{
+            height: 70px;
+            top: 70px;
+        }
+        .nav-login-cart{
+            transform: scale(0.8);
+        }
+   }

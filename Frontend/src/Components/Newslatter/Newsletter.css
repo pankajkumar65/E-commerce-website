@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+.newsletter{
+    width: 65%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 0px 7vw;
+    margin-bottom: 7.2vw;
+    background: linear-gradient(180deg, #fde1ff 0%,#e1ffea22 60%);
+    gap: 30px;
+}
+
+.newsletter h1{
+    color: #454545;
+    font-size: 2.9vw;
+    font-weight: 600;
+}
+
+.newsletter p{
+    color: #454545;
+    font-size: 1vw;
+}
+
+.newsletter div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    width: 40vw;
+    height: 8vh;
+    border-radius: 2vw;
+    border: 1px solid #e3e3e3;
+}
+
+.newsletter input{
+    width: 500px;
+    margin-left: 30px;
+    border: none;
+    outline: none;
+    color: #616161;
+    font-family: 'Poppins', sans-serif;
+}
+
+.newsletter div button{
+    width: 12vw;
+    height: 8vh;
+    border-radius: 2vw;
+    background: black;
+    color: white;
+    font-size: 0.8vw;
+    cursor: pointer;
+}
+    
