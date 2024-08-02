@@ -9,7 +9,6 @@ const Login = () => {
         <div className="loginsignup-fields">
             <input type="email" placeholder='Email Address' />
             <input type="password" placeholder='password' />
-            <input type="password" placeholder='Conform password' />
         </div>
         <button>Login</button>
          <p className="loginsignup-login">Not Registered? <Link to="/signup"><span style={{cursor:'pointer',textDecorationLine:"none"}}>Signup here</span></Link></p>
