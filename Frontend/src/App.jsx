@@ -1,5 +1,6 @@
 import './App.css'
 import Navbar from './Components/Navbar/Navbar'
+import NavbarBL from './Components/NavbarBeforeLogin/NavbarBL'
 import { BrowserRouter,Routes,Route } from 'react-router-dom'
 import Shop from './Pages/Shop'
 import ShopCategory from './Pages/ShopCategory'
@@ -14,12 +15,21 @@ import kids_banner from './Components/Assets/banner_kids.png'
 import Admin from './Pages/Admin'
 import Adminsignup from './Pages/Adminsignup'
 import AdminRegis from './Pages/AdminRegis'
+import Newsletter from './Components/Newslatter/Newsletter'
+import { useState } from 'react'
 
 function App() {
+  const [Navshow, setNavshow] = useState(false); 
+  const handleShow = (childData) => {
+    setNavshow(childData);
+  };
+   
   return (
     <div>
        <BrowserRouter>
-         <Navbar/>
+       {Navshow ? <Navbar onSendmsg={handleShow}/> : <NavbarBL/>}
+         {/* <Navbar/> */}
+         {/* <NavbarBL/> */}
          <Routes>
            <Route path='/shop' element={<Shop/>}></Route>
            <Route path='/mens' element={<ShopCategory banner={men_banner} category="men"/>}></Route>
@@ -30,12 +40,11 @@ function App() {
            </Route>
            <Route path='/cart' element={<Cart/>}/>
            <Route path='/' element={<LoginSignup/>}/>
-           <Route path='/login' element={<Login/>}/>
-           <Route path='/admin' element={<Admin/>}/>
+           <Route path='/login' element={<Login onSendmsg={handleShow}/>}/>
+           <Route path='/admin' element={<Admin onSendmsg={handleShow}/>}/>
            <Route path='/adminsignup' element={<Adminsignup/>}/>
            <Route path='/adminregis' element={<AdminRegis/>}/>
          </Routes>
-         
        </BrowserRouter>
        <Footer/>
     </div>

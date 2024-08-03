@@ -4,8 +4,11 @@ import logo from '../Assets/logo.png'
 import cart_icon from '../Assets/cart_icon.png'
 import { Link } from 'react-router-dom'
 import { ShopContext } from '../../Context/ShopContext';
-const Navbar = () => {
-
+const Navbar = ({onSendmsg}) => {
+  const sendMessageToParent = () => {
+    const Navshow = false;
+    onSendmsg(Navshow);
+  };
   const[menu,setmenu] = useState("shop");
   const{message,getTotalCartItems} = useContext(ShopContext);
   return (
@@ -25,8 +28,8 @@ const Navbar = () => {
         <li onClick={()=>setmenu("kids")}><Link style={{textDecoration:'none'}} to="/kids">Kids</Link>{menu=="kids"?<hr/>:<></>}</li>
       </ul>
       <div className='nav-login-cart'>
-         <Link to="/"><button>Login</button></Link>
-         <Link to="/adminsignup"><button className='admin px-1 pb-4 '>Admin Login</button></Link>
+         <Link to="/"><button onClick={sendMessageToParent}>Logout</button></Link>
+         {/* <Link to="/adminsignup"><button className='admin px-1 pb-4 '>Admin Login</button></Link> */}
          <Link to="/cart"><img src={cart_icon} alt=""/></Link>
          <div className="nav-cart-count">{getTotalCartItems()}</div>
       </div> 

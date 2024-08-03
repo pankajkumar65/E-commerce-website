@@ -6,7 +6,7 @@ const LoginSignup = () => {
   return (
     <div className='loginsignup'>
       <div className="loginsignup-container">
-        <h1>Sign Up</h1>
+         <h1>Sign Up</h1>
         <div className="loginsignup-fields">
             <input type="text" placeholder='First Name' />
             <input type="text" placeholder='Last Name' />
@@ -15,7 +15,7 @@ const LoginSignup = () => {
             <input type="password" placeholder='password' />
             <input type="password" placeholder='confirm password' />
         </div>
-        <button>Continue</button>
+        <Link><button>Continue</button></Link> 
         <p className="loginsignup-login">Already have an account? <Link to="/login"><span style={{cursor:'pointer'}}>Login here</span></Link></p>
         <div className="loginsignup-agree">
           <input  style={{cursor:'pointer'}} type="checkbox" name='' id='' />
