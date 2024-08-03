@@ -2,11 +2,11 @@ import React from 'react'
 import './CSS/Loginsignup.css'
 import { Link } from 'react-router-dom'
 
-const LoginSignup = () => {
+const Adminsignup = () => {
   return (
     <div className='loginsignup'>
       <div className="loginsignup-container">
-        <h1>Sign Up</h1>
+        <h1>Admin Sign Up</h1>
         <div className="loginsignup-fields">
             <input type="text" placeholder='First Name' />
             <input type="text" placeholder='Last Name' />
@@ -16,7 +16,7 @@ const LoginSignup = () => {
             <input type="password" placeholder='confirm password' />
         </div>
         <button>Continue</button>
-        <p className="loginsignup-login">Already have an account? <Link to="/login"><span style={{cursor:'pointer'}}>Login here</span></Link></p>
+        <p className="loginsignup-login">Already have an account? <Link to="/admin"><span style={{cursor:'pointer'}}>Login here</span></Link></p>
         <div className="loginsignup-agree">
           <input  style={{cursor:'pointer'}} type="checkbox" name='' id='' />
           <p>By continuing i agree to the terms of use & privacy policy.</p>
@@ -26,4 +26,4 @@ const LoginSignup = () => {
   )
 }
 
-export default LoginSignup
+export default Adminsignup
