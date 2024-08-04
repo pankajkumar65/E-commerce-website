@@ -10,7 +10,7 @@ const NavbarBL = () => {
     const { message, getTotalCartItems } = useContext(ShopContext);
     return (
         <div className='Navbar'>
-            <div className='navbar flex justify-between px-36'>
+            <div className='navbar1 flex justify-between px-24'>
                 <Link to="/shop">
                     <div className="nav-logo ">
                         <img src={logo} alt="" />
